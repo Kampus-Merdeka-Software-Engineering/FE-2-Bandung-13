@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Capstone Project</title>
+    <!--link font -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="beruk.css" />
+  </head>
+  <body>
+    <!--bagian header-->
+    <header class="header">
+      <a href="#" class="logo"><i class="fas fa-hotel"></i>TURU</a>
+      <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="#about">about</a>
+        <a href="#room">room</a>
+        <a href="#review">review</a>
+        <a href="#faq">faq</a>
+        <a href="#reservation" class="btn">Login</a>
+      </nav>
+      <div id="menu-btn" class="fas fa-bars"></div>
+    </header>
+    <!--selesai-->
+    <!--bagian home-->
+
+    <section class="home" id="home">
+      <div class="swiper home-slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide slide" style="background: url(img/hotel1.jpg) no-repeat">
+            <div class="content">
+              <h3>It's where dreams come true</h3>
+              <a href="#" class="btn"> book now</a>
+            </div>
+          </div>
+
+          <div class="swiper-slide slide" style="background: url(img/hotel2.jpg) no-repeat">
+            <div class="content">
+              <h3>It's where dreams come true</h3>
+              <a href="#" class="btn"> book now</a>
+            </div>
+          </div>
+
+          <div class="swiper-slide slide" style="background: url(img/hotel3.jpg) no-repeat">
+            <div class="content">
+              <h3>It's where dreams come true</h3>
+              <a href="#" class="btn"> book now</a>
+            </div>
+          </div>
+
+          <div class="swiper-slide slide" style="background: url(img/hotel4.jpg) no-repeat">
+            <div class="content">
+              <h3>It's where dreams come true</h3>
+              <a href="#" class="btn"> book now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </section>
+    <!--selesai-->
+
+    <!--availability-->
+
+    <section class="availability">
+      <form action="">
+        <div class="box">
+          <p>check in <span>*</span></p>
+          <input type="date" class="input" />
+        </div>
+
+        <div class="box">
+          <p>check out <span>*</span></p>
+          <input type="date" class="input" />
+        </div>
+
+        <div class="box">
+          <p>adults <span>*</span></p>
+          <select name="adults" id="" class="input">
+            <option value="1">1 adults</option>
+            <option value="2">2 adults</option>
+            <option value="3">3 adults</option>
+            <option value="4">4 adults</option>
+            <option value="5">5 adults</option>
+            <option value="6">6 adults</option>
+          </select>
+        </div>
+
+        <div class="box">
+          <p>children <span>*</span></p>
+          <select name="child" id="" class="input">
+            <option value="1">1 child</option>
+            <option value="2">2 child</option>
+            <option value="3">3 child</option>
+            <option value="4">4 child</option>
+            <option value="5">5 child</option>
+            <option value="6">6 child</option>
+          </select>
+        </div>
+
+        <div class="box">
+          <p>rooms <span>*</span></p>
+          <select name="rooms" id="" class="input">
+            <option value="1">1 rooms</option>
+            <option value="2">2 rooms</option>
+            <option value="3">3 rooms</option>
+            <option value="4">4 rooms</option>
+            <option value="5">5 rooms</option>
+            <option value="6">6 rooms</option>
+          </select>
+        </div>
+
+        <input type="submit" value="check availability" class="btn" />
+      </form>
+    </section>
+
+    <!-- bagian about-->
+
+    <section class="about" id="about">
+      <div class="row">
+        <div class="image">
+          <img src="img/image1.jpg" alt="" />
+        </div>
+
+        <div class="content">
+          <h3>about us</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est animi iure deserunt. Aliquid distinctio incidunt iste doloribus, ut nihil vel.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt aspernatur quae commodi nisi rerum ratione aperiam possimus? Vitae, aut quaerat.</p>
+        </div>
+      </div>
+    </section>
+
+    <!--selesai-->
+
+    <!--bagian rooms-->
+
+    <section class="room" id="room">
+      <h1 class="heading">our room</h1>
+
+      <div class="swiper room-slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide slide">
+            <div class="image">
+              <span class="price">Rp 500.000</span>
+              <img src="img/room1.png" alt="" />
+              <a href="#" class="fas fa-shopping-cart"></a>
+            </div>
+            <div class="content">
+              <h3>Exclusive Room</h3>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis veritatis consequuntur.</p>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <a href="#" class="btn">book now</a>
+            </div>
+          </div>
+
+          <div class="swiper-slide slide">
+            <div class="image">
+              <span class="price">Rp 500.000</span>
+              <img src="img/room2.jpg" alt="" />
+              <a href="#" class="fas fa-shopping-cart"></a>
+            </div>
+            <div class="content">
+              <h3>Exclusive Room</h3>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis veritatis consequuntur.</p>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <a href="#" class="btn">book now</a>
+            </div>
+          </div>
+
+          <div class="swiper-slide slide">
+            <div class="image">
+              <span class="price">Rp 500.000</span>
+              <img src="img/room3.jpg" alt="" />
+              <a href="#" class="fas fa-shopping-cart"></a>
+            </div>
+            <div class="content">
+              <h3>Exclusive Room</h3>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis veritatis consequuntur.</p>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <a href="#" class="btn">book now</a>
+            </div>
+          </div>
+
+          <div class="swiper-slide slide">
+            <div class="image">
+              <span class="price">Rp 500.000</span>
+              <img src="img/room4.jpeg" alt="" />
+              <a href="#" class="fas fa-shopping-cart"></a>
+            </div>
+            <div class="content">
+              <h3>Exclusive Room</h3>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis veritatis consequuntur.</p>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <a href="#" class="btn">book now</a>
+            </div>
+          </div>
+
+          <div class="swiper-slide slide">
+            <div class="image">
+              <span class="price">Rp 500.000</span>
+              <img src="img/room5.jpeg" alt="" />
+              <a href="#" class="fas fa-shopping-cart"></a>
+            </div>
+            <div class="content">
+              <h3>Exclusive Room</h3>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis veritatis consequuntur.</p>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <a href="#" class="btn">book now</a>
+            </div>
+          </div>
+
+          <div class="swiper-slide slide">
+            <div class="image">
+              <span class="price">Rp 500.000</span>
+              <img src="img/room6.jpg" alt="" />
+              <a href="#" class="fas fa-shopping-cart"></a>
+            </div>
+            <div class="content">
+              <h3>Exclusive Room</h3>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis veritatis consequuntur.</p>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <a href="#" class="btn">book now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+    <!--selesai-->
+
+    <!--bagian servis-->
+
+    <section class="services">
+      <div class="box-container">
+        <div class="box">
+          <img src="img/logo1.jpg" alt="" />
+          <h3>a</h3>
+        </div>
+
+        <div class="box">
+          <img src="img/logo2.png" alt="" />
+          <h3>b</h3>
+        </div>
+
+        <div class="box">
+          <img src="img/logo3.png" alt="" />
+          <h3>c</h3>
+        </div>
+
+        <div class="box">
+          <img src="img/logo4.png" alt="" />
+          <h3>d</h3>
+        </div>
+
+        <div class="box">
+          <img src="img/logo5.jpg" alt="" />
+          <h3>e</h3>
+        </div>
+
+        <div class="box">
+          <img src="img/logo6.png" alt="" />
+          <h3>f</h3>
+        </div>
+      </div>
+    </section>
+
+    <!--selesai-->
+
+    <!--bagian review-->
+
+    <section class="review" id="review">
+      <div class="swiper review-slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide slide">
+            <h2 class="heading">client's review</h2>
+            <i class="fas fa-quote-right"></i>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos dolor natus amet corrupti a iusto veniam dolorum, possimus eum porro?</p>
+            <div class="user">
+              <img src="img/foto1.jpeg" alt="" />
+              <div class="user-info">
+                <h3>Joko</h3>
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide slide">
+            <h2 class="heading">client's review</h2>
+            <i class="fas fa-quote-right"></i>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos dolor natus amet corrupti a iusto veniam dolorum, possimus eum porro?</p>
+            <div class="user">
+              <img src="img/foto2.jpeg" alt="" />
+              <div class="user-info">
+                <h3>Joko</h3>
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide slide">
+            <h2 class="heading">client's review</h2>
+            <i class="fas fa-quote-right"></i>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos dolor natus amet corrupti a iusto veniam dolorum, possimus eum porro?</p>
+            <div class="user">
+              <img src="img/foto3.jpeg" alt="" />
+              <div class="user-info">
+                <h3>Joko</h3>
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide slide">
+            <h2 class="heading">client's review</h2>
+            <i class="fas fa-quote-right"></i>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos dolor natus amet corrupti a iusto veniam dolorum, possimus eum porro?</p>
+            <div class="user">
+              <img src="img/foto4.jpg" alt="" />
+              <div class="user-info">
+                <h3>Joko</h3>
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide slide">
+            <h2 class="heading">client's review</h2>
+            <i class="fas fa-quote-right"></i>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos dolor natus amet corrupti a iusto veniam dolorum, possimus eum porro?</p>
+            <div class="user">
+              <img src="img/foto5.jpeg" alt="" />
+              <div class="user-info">
+                <h3>Joko</h3>
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide slide">
+            <h2 class="heading">client's review</h2>
+            <i class="fas fa-quote-right"></i>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos dolor natus amet corrupti a iusto veniam dolorum, possimus eum porro?</p>
+            <div class="user">
+              <img src="img/foto6.jpg" alt="" />
+              <div class="user-info">
+                <h3>Joko</h3>
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+    <!--selesai-->
+
+    <!--bagian faq-->
+
+    <section class="faqs" id="faq">
+      <h1 class="heading">frequently asked questions</h1>
+      <div class="row">
+        <div class="image">
+          <img src="img/faqs.png" alt="" />
+        </div>
+
+        <div class="content">
+          <div class="box">
+            <h3>what are payment methods?</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, ad?</p>
+          </div>
+
+          <div class="box">
+            <h3>what are payment methods?</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, ad?</p>
+          </div>
+
+          <div class="box">
+            <h3>what are payment methods?</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, ad?</p>
+          </div>
+
+          <div class="box">
+            <h3>what are payment methods?</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, ad?</p>
+          </div>
+
+          <div class="box">
+            <h3>what are payment methods?</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, ad?</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--selesai-->
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="beruk.js"></script>
+  </body>
+</html>
