@@ -77,3 +77,27 @@ accordions.forEach((acco) => {
     acco.classList.add("active");
   };
 });
+
+// Login
+const card = document.querySelector(".card");
+const loginLink = document.querySelector(".login-link");
+const registerLink = document.querySelector(".register-link");
+
+registerLink.addEventListener("click", () => {
+  card.classList.add("active");
+});
+
+loginLink.addEventListener("click", () => {
+  card.classList.remove("active");
+});
+
+let input = document.getElementById("password");
+let icon = document.getElementById("icon");
+
+function action() {
+  if (input.type == "text") {
+    input.type = "password";
+  } else {
+    input.type = "text";
+  }
+}
