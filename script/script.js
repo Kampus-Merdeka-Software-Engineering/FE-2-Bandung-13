@@ -78,26 +78,35 @@ accordions.forEach((acco) => {
   };
 });
 
-// Login
-const card = document.querySelector(".card");
-const loginLink = document.querySelector(".login-link");
-const registerLink = document.querySelector(".register-link");
+// FORM LOGIN Script
+const loginText = document.querySelector(".title-text .login");
+      const loginForm = document.querySelector("form.login");
+      const loginBtn = document.querySelector("label.login");
+      const signupBtn = document.querySelector("label.signup");
+      const signupLink = document.querySelector("form .signup-link a");
+      signupBtn.onclick = (()=>{
+        loginForm.style.marginLeft = "-50%";
+        loginText.style.marginLeft = "-50%";
+      });
+      loginBtn.onclick = (()=>{
+        loginForm.style.marginLeft = "0%";
+        loginText.style.marginLeft = "0%";
+      });
+      signupLink.onclick = (()=>{
+        signupBtn.click();
+        return false;
+      });
 
-registerLink.addEventListener("click", () => {
-  card.classList.add("active");
-});
+// login button
 
-loginLink.addEventListener("click", () => {
-  card.classList.remove("active");
-});
+function openForm() {
+  document.getElementById("loginForm").style.display = "block";
+}
 
-let input = document.getElementById("password");
-let icon = document.getElementById("icon");
+function closeForm() {
+  document.getElementById("loginForm").style.display = "none";
+}
 
-function action() {
-  if (input.type == "text") {
-    input.type = "password";
-  } else {
-    input.type = "text";
-  }
+function btn_close() {
+  document.getElementById("loginForm").style.display = "none";
 }
