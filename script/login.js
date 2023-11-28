@@ -17,7 +17,31 @@ function validateLoginForm() {
     return false;
   }
 
-  document.getElementById("loginForm").action = "index.html";
+  // Membuat objek data untuk dikirim ke backend
+  var data = {
+    username: username,
+    password: password,
+  };
 
-  return true;
+  fetch("http://localhost:3000/api/login", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+      if (data.success) {
+        window.location.href = "index.html";
+      } else {
+        alert("Login failed. Please check your credentials.");
+      }
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+    });
+
+  return false;
 }
