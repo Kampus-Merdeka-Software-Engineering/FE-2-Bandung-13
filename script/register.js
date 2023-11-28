@@ -32,13 +32,36 @@ function validateRegisterForm() {
     termsError.innerHTML = "You must agree to the terms and conditions";
     return false;
   }
-  window.location.href = "index.html";
+
+  // Buat objek data untuk dikirim ke backend
+  var data = {
+    username: username,
+    email: email,
+    password: password,
+  };
+
+  // Kirim data ke backend menggunakan Fetch API
+  fetch("http://localhost:3000/api/register", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  })
+    .then((response) => response.json())
+    .then((result) => {
+      // Handle hasil dari backend
+      console.log(result);
+
+      // Redirect ke halaman lain jika registrasi berhasil
+      if (result.success) {
+        window.location.href = "index.html";
+      }
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+      // Handle error jika diperlukan
+    });
 
   return true;
-}
-
-function isValidEmail(email) {
-  // Basic email validation using a regular expression
-  var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return emailRegex.test(email);
 }
