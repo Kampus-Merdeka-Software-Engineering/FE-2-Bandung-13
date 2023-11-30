@@ -44,12 +44,12 @@
           <div class="slider-tab"></div>
         </div>
         <div class="form-inner">
-          <form action="#" class="login">
+          <form action="http://localhost:3000/api/login" class="login" onsubmit="return validateLoginForm()" method="POST">
             <div class="field">
-              <input type="text" placeholder="Email Address" required />
+              <input type="text" id="loginUsername" placeholder="Username" required />
             </div>
             <div class="field">
-              <input type="password" placeholder="Password" required />
+              <input type="password" id="loginPassword" placeholder="Password" required />
             </div>
             <div class="pass-link"><a href="#">Forgot password?</a></div>
             <div class="field btn">
@@ -58,15 +58,15 @@
             </div>
             <div class="signup-link">Not a member? <a href="">Signup now</a></div>
           </form>
-          <form action="#" class="signup">
+          <form action="http://localhost:3000/api/register" class="signup" onsubmit="return validateRegisterForm()" method="POST">
             <div class="field">
-              <input type="text" placeholder="Email Address" required />
+              <input type="text" id="registerUsername" placeholder="Username" required />
             </div>
             <div class="field">
-              <input type="password" placeholder="Password" required />
+              <input type="password" id="registerPassword" placeholder="Password" required />
             </div>
             <div class="field">
-              <input type="password" placeholder="Confirm password" required />
+              <input type="password" id="confirmPassword" placeholder="Confirm password" required />
             </div>
             <div class="field btn">
               <div class="btn-layer"></div>
