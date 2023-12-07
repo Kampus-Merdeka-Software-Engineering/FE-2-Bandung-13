@@ -111,110 +111,57 @@ function btn_close() {
   document.getElementById("loginForm").style.display = "none";
 }
 
-// Script validate login
-function validateLoginForm() {
-  var username = document.getElementById("loginUsername").value;
-  var password = document.getElementById("loginPassword").value;
-
-  var usernameError = document.getElementById("loginUsernameError");
-  var passwordError = document.getElementById("loginPasswordError");
-  usernameError.innerHTML = "";
-  passwordError.innerHTML = "";
-
-  if (username.trim() === "") {
-    usernameError.innerHTML = "Username must be filled out";
-    return false;
-  }
-
-  if (password.trim().length < 6) {
-    passwordError.innerHTML = "Password must be at least 6 characters";
-    return false;
-  }
-
-  // Membuat objek data untuk dikirim ke backend
-  var data = {
-    username: username,
-    password: password,
-  };
-
-  fetch("http://localhost:3000/api/login", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(data),
-  })
-    .then((response) => response.json())
-    .then((result) => {
-      console.log(result);
-      if (result.success) {
-        window.location.href = "index.html";
-      } else {
-        alert("Login failed. Please check your credentials.");
-      }
-    })
-    .catch((error) => {
-      console.error("Error:", error);
-    });
-
-  return false;
-}
-// selesai
-
 // Script validate register
-function validateRegisterForm() {
-  var username = document.getElementById("registerUsername").value;
-  var password = document.getElementById("registerPassword").value;
-  var confirmPassword = document.getElementById("confirmPassword").value;
+const apiUrl = "http://localhost:3000/user.register"; // Ganti dengan URL backend Anda
 
-  var usernameError = document.getElementById("registerUsernameError");
-  var passwordError = document.getElementById("registerPasswordError");
-  var confirmPasswordError = document.getElementById("confirmPasswordError");
-  usernameError.innerHTML = "";
-  passwordError.innerHTML = "";
-  confirmPasswordError.innerHTML = "";
-
-  if (username.trim() === "") {
-    usernameError.innerHTML = "Username must be filled out";
-    return false;
-  }
-
-  if (password.trim().length < 6) {
-    passwordError.innerHTML = "Password must be at least 6 characters";
-    return false;
-  }
+async function validateRegisterForm() {
+  const username = document.getElementById("registerUsername").value;
+  const password = document.getElementById("registerPassword").value;
+  const confirmPassword = document.getElementById("confirmPassword").value;
 
   if (password !== confirmPassword) {
-    confirmPasswordError.innerHTML = "Passwords do not match";
-    return false;
+    alert("Password and Confirm Password do not match!");
+    return;
   }
 
-  // Membuat objek data untuk dikirim ke backend
-  var data = {
-    username: username,
-    password: password,
-  };
-
-  fetch("http://localhost:3000/api/register", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(data),
-  })
-    .then((response) => response.json())
-    .then((result) => {
-      console.log(result);
-      if (result.success) {
-        window.location.href = "index.html";
-      } else {
-        alert("Registration failed. Please try again.");
-      }
-    })
-    .catch((error) => {
-      console.error("Error:", error);
+  try {
+    const response = await fetch(`${apiUrl}/`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ username, password }),
     });
 
-  return false;
+    const data = await response.json();
+    console.log(data);
+
+    // Tambahkan logika untuk menangani respons dari backend (mungkin tampilkan pesan sukses atau error)
+  } catch (error) {
+    console.error("Error during registration:", error);
+  }
 }
 // selesai
+
+// Script validate login
+async function validateLoginForm() {
+  const username = document.getElementById("loginUsername").value;
+  const password = document.getElementById("loginPassword").value;
+
+  try {
+    const response = await fetch(`${apiUrl}/login`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ username, password }),
+    });
+
+    const data = await response.json();
+    console.log(data);
+
+    // Tambahkan logika untuk menangani respons dari backend (mungkin arahkan pengguna ke halaman setelah login)
+  } catch (error) {
+    console.error("Error during login:", error);
+  }
+}
