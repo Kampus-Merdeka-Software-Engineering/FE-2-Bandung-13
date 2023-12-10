@@ -112,7 +112,7 @@ function btn_close() {
 }
 
 // Script validate register
-const apiUrl = "http://localhost:3080/user.register"; // Ganti dengan URL backend Anda
+const apiUrl = "http://localhost:3000/user.register"; // Ganti dengan URL backend Anda
 
 async function validateRegisterForm() {
   const username = document.getElementById("registerUsername").value;
@@ -184,7 +184,7 @@ async function submitReservation() {
   };
 
   try {
-    const response = await fetch("http://localhost:3080/book", {
+    const response = await fetch("http://localhost:3000/book", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
