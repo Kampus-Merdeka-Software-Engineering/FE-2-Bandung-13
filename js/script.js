@@ -165,3 +165,40 @@ async function validateLoginForm() {
     console.error("Error during login:", error);
   }
 }
+
+// JS Reservasi
+document.getElementById("reservationForm").addEventListener("submit", function (event) {
+  event.preventDefault(); // Prevent the default form submission behavior
+  submitReservation();
+});
+
+async function submitReservation() {
+  const reservationData = {
+    name: document.querySelector('input[name="name"]').value,
+    email: document.querySelector('input[name="email"]').value,
+    checkIn: document.querySelector('input[name="checkIn"]').value,
+    checkOut: document.querySelector('input[name="checkOut"]').value,
+    adults: document.querySelector('select[name="adults"]').value,
+    child: document.querySelector('select[name="child"]').value,
+    roomType: document.querySelector('select[name="roomType"]').value,
+  };
+
+  try {
+    const response = await fetch("http://localhost:3000/book", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(reservationData),
+    });
+
+    if (response.ok) {
+      const data = await response.json();
+      alert(data.message);
+    } else {
+      throw new Error("Failed to book a room.");
+    }
+  } catch (error) {
+    console.error("Error:", error.message);
+  }
+}

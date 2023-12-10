@@ -475,7 +475,7 @@
     <section class="reservation" id="reservation">
       <h1 class="heading">book now</h1>
 
-      <form action="">
+      <form action="http://localhost:3000/" id="reservationForm">
         <div class="container">
           <div class="box">
             <p>name <span>*</span></p>
@@ -545,7 +545,7 @@
           </div>
         </div>
 
-        <input type="submit" value="Book Now" class="btn" />
+        <input type="submit" value="Book Now" class="btn" onclick="submitReservation()" />
       </form>
     </section>
 
