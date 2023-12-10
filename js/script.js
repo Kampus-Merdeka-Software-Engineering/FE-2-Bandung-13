@@ -184,7 +184,7 @@ async function submitReservation() {
   };
 
   try {
-    const response = await fetch("http://localhost:3000/book", {
+    const response = await fetch("http://localhost:3080/book", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
