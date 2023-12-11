@@ -521,14 +521,14 @@ section {
   height: 42px;
   max-width: 150px;
   width: 100%;
-  font-weight: 600;
+  font-weight: 700;
   border: none;
   outline: none;
   color: var(--white);
   border-radius: 5px;
   margin: 25px 0;
   margin-right: 25px;
-  background-color: #48cae4;
+  background-color: #0077b6;
   transition: all 0.3s linear;
   cursor: pointer;
   border: 1px solid #aaa;
@@ -870,4 +870,4 @@ form .btn input[type="submit"] {
   cursor: pointer;
 }
 
-/* selsai */
+/* selesai */
