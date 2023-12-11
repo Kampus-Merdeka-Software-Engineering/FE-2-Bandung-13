@@ -1,12 +1,14 @@
 const API_URL = "https://vast-teal-pigeon-cap.cyclic.app";
 
 //POST Booking
+
 document.addEventListener("DOMContentLoaded", function () {
-    const reservationForm = document.getElementById("reservationForm");
-   
-    reservationForm.addEventListener("submit", function (event) {
+  const reservationForm = document.getElementById("reservationForm");
+
+  reservationForm.addEventListener("submit", function (event) {
       event.preventDefault();
-   
+
+      // Retrieving form values
       const name = document.getElementById("name").value; 
       const email = document.getElementById("email").value;
       const roomType = document.getElementById("roomType").value;
@@ -17,12 +19,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (!name || !email || !roomType || !checkIn || !checkOut || !adult || !child) {
         showSweetAlert(
-          "Error",
-          "Please complete all the columns in the form!",
+          "Oops!",
+          "Please fill in all the fields before submitting.",
           "error"
-        );
-        return;
-      }
+      );
+      return;
+  }
    
       const formData = {
         name, 
@@ -40,52 +42,54 @@ document.addEventListener("DOMContentLoaded", function () {
         headers: {
           "Content-Type": "application/json",
         },
-            body: formData,
-        })
+        body: JSON.stringify(formData),
+      })
         .then((response) => {
-            if (!response.ok) {
-                throw new Error("Network response was not ok.");
-            }
-            return response.json();
+          if (!response.ok) {
+            throw new Error("The form submission encountered an error.");
+          }
+          return response.json();
         })
         .then((data) => {
-            showSweetAlert(
-                "Success",
-                "Your reservation has been successfully submitted.",
-                "success"
-            ).then(() => {
-                window.location.href = "index.html";
-            });
+          showSweetAlert(
+            "Success",
+            "Booking Rooms has been sent. Check it in the History page",
+            "success",
+          ).then(() => {
+            //setelah sukses arahkan ke home
+            window.location.href = "index.html";
+          });
         })
         .catch((error) => {
-            console.error("Error:", error.message);
-            showSweetAlert(
-                "Error",
-                "There was a problem submitting your reservation. Please try again later.",
-                "error"
-            );
+          console.error("Error:", error.message);
+          showSweetAlert(
+            "Error",
+            "The message sending failed. Please try again later.",
+            "error",
+          );
         });
     });
-
-    function showSweetAlert(title, text, icon) {
-        return Swal.fire({
-            title: title,
-            text: text,
-            icon: icon,
-            confirmButtonColor: "#645CFF",
-        });
-    }
-});
-
-   //GET Rooms API /rooms
-   async function setupRoomsPage() {
-    try {
-      const response = await fetch(`${API_URL}/rooms`);
-      const roomsData = await response.json();
-      console.log(roomsData, "Rooms")
   
-      const selector = document.getElementById("rooms");
-      roomsData.data.forEach((room) => {
+    function showSweetAlert(title, text, icon) {
+      return Swal.fire({
+        title: title,
+        text: text,
+        icon: icon,
+        confirmButtonColor: "#645cff",
+   // disini untuk ubah tulisan
+     });
+    }
+  });
+  
+   //GET Rooms API /rooms
+async function setupRoomsPage() {
+    try {
+      const response = await fetch(`${API_URL}/room`);
+      const roomsData = await response.json();
+      console.log(roomsData, "Room")
+  
+      const selector = document.getElementById("room");
+      roomsData.forEach((room) => {
         const optionRooms = document.createElement("option");
         optionRooms.value = room.id;
         optionRooms.textContent = room.rooms; // Assuming room.name is the property containing room names
