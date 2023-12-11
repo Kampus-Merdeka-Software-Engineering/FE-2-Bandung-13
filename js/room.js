@@ -1,5 +1,3 @@
-//const API_URL = "http://localhost:3000";
-const API_URL = "https://vast-teal-pigeon-cap.cyclic.app";
 
 
 // room api
