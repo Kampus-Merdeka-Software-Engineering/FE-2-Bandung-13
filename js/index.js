@@ -112,7 +112,7 @@ function btn_close() {
 }
 
 // Script validate register
-const apiUrl = "http://localhost:3000/user.register"; // Ganti dengan URL backend Anda
+const apiUrl = "https://vast-teal-pigeon-cap.cyclic.app"; // Ganti dengan URL backend Anda
 
 async function validateRegisterForm() {
   const username = document.getElementById("registerUsername").value;
