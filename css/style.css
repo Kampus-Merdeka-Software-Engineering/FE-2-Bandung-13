@@ -513,6 +513,27 @@ section {
   border-bottom: 0.2rem solid rgba(0, 0, 0, 0.1);
   color: var(--black);
 }
+
+.buttons .btnText {
+  align-items: center;
+  text-align: center;
+  justify-self: center;
+  height: 42px;
+  max-width: 150px;
+  width: 100%;
+  font-weight: 600;
+  border: none;
+  outline: none;
+  color: var(--white);
+  border-radius: 5px;
+  margin: 25px 0;
+  margin-right: 25px;
+  background-color: #48cae4;
+  transition: all 0.3s linear;
+  cursor: pointer;
+  border: 1px solid #aaa;
+}
+
 /* selesai /*
 
 /* footer */

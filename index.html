@@ -481,32 +481,32 @@
 
     <section class="reservation" id="reservation">
       <h1 class="heading">book now</h1>
-
-      <form action="http://localhost:3000/" id="reservationForm">
+    
+      <form id="reservationForm">
         <div class="container">
-          <div class="box">
+           <div class="box">
             <p>name <span>*</span></p>
-            <input type="text" class="input" placeholder="Nama Kamu" />
+            <input id="name" type="text" class="input" placeholder="Your name" />
           </div>
-
+    
           <div class="box">
             <p>email <span>*</span></p>
-            <input type="text" class="input" placeholder="Email Kamu" />
+            <input id="email" type="text" class="input" placeholder="Your email" />
           </div>
-
+    
           <div class="box">
             <p>check in <span>*</span></p>
-            <input type="date" class="input" />
+            <input id="checkIn" type="date" class="input" />
           </div>
-
+    
           <div class="box">
             <p>check out <span>*</span></p>
-            <input type="date" class="input" />
+            <input id="checkOut" type="date" class="input" />
           </div>
-
+    
           <div class="box">
             <p>adults <span>*</span></p>
-            <select name="adults" class="input">
+            <select id="adult" name="adults" class="input">
               <option value="1">1 adults</option>
               <option value="2">2 adults</option>
               <option value="3">3 adults</option>
@@ -515,10 +515,10 @@
               <option value="6">6 adults</option>
             </select>
           </div>
-
+    
           <div class="box">
             <p>children <span>*</span></p>
-            <select name="child" class="input">
+            <select id="child" name="child" class="input">
               <option value="0">None</option>
               <option value="1">1 child</option>
               <option value="2">2 child</option>
@@ -528,7 +528,7 @@
               <option value="6">6 child</option>
             </select>
           </div>
-
+    
           <div class="box">
             <p>rooms <span>*</span></p>
             <select name="rooms" class="input">
@@ -540,10 +540,10 @@
               <option value="6">6 rooms</option>
             </select>
           </div>
-
+    
           <div class="box">
             <p>room type <span>*</span></p>
-            <select name="type" class="input">
+            <select id="roomType" name="type" class="input">
               <option value="1">Classic Room</option>
               <option value="2">Deluxe Room</option>
               <option value="3">Executive Room</option>
@@ -551,8 +551,14 @@
             </select>
           </div>
         </div>
-
-        <input type="submit" value="Book Now" class="btn" onclick="submitReservation()" />
+        <!-- Start Buttons to Reciept -->
+        <div class="buttons">
+          <button type="submit" class="btnText" id="submitReservation" value="submit">
+            Booking Room 
+          </button>
+        </div>
+        <!-- End Buttons to Reciept -->
+        <!-- <input type="submit" value="Book Now" class="btn" onclick="submitReservation()" /> -->
       </form>
     </section>
 
@@ -597,5 +603,6 @@
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="js/index.js"></script>
     <script src="js/room.js"></script>
+    <script src="js/book.js"></script>
   </body>
 </html>
