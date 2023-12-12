@@ -79,38 +79,38 @@ accordions.forEach((acco) => {
 });
 
 // // FORM LOGIN Script
-// const loginText = document.querySelector(".title-text .login");
-// const loginForm = document.querySelector("form.login");
-// const loginBtn = document.querySelector("label.login");
-// const signupBtn = document.querySelector("label.signup");
-// const signupLink = document.querySelector("form.signup-link a");
-// signupBtn.addEventListener("click", () => {
-//   loginForm.style.marginLeft = "-50%";
-//   loginText.style.marginLeft = "-50%";
-// });
-// loginBtn.addEventListener("click", () => {
-//   loginForm.style.marginLeft = "0%";
-//   loginText.style.marginLeft = "0%";
-// });
-// signupLink.addEventListener("click", (event) => {
-//   event.preventDefault();
-//   signupBtn.click();
-//   return false;
-// });
+const loginText = document.querySelector(".title-text .login");
+const loginForm = document.querySelector("form.login");
+const loginBtn = document.querySelector("label.login");
+const signupBtn = document.querySelector("label.signup");
+const signupLink = document.querySelector("form.signup-link a");
+signupBtn.addEventListener("click", () => {
+  loginForm.style.marginLeft = "-50%";
+  loginText.style.marginLeft = "-50%";
+});
+loginBtn.addEventListener("click", () => {
+  loginForm.style.marginLeft = "0%";
+  loginText.style.marginLeft = "0%";
+});
+signupLink.addEventListener("click", (event) => {
+  event.preventDefault();
+  signupBtn.click();
+  return false;
+});
 
 // // login button
 
-// function openForm() {
-//   document.getElementById("loginForm").style.display = "block";
-// }
+function openForm() {
+  document.getElementById("loginForm").style.display = "block";
+}
 
-// function closeForm() {
-//   document.getElementById("loginForm").style.display = "none";
-// }
+function closeForm() {
+  document.getElementById("loginForm").style.display = "none";
+}
 
-// function btn_close() {
-//   document.getElementById("loginForm").style.display = "none";
-// }
+function btn_close() {
+  document.getElementById("loginForm").style.display = "none";
+}
 
 // // Script validate register
 // const API_URL = "https://vast-teal-pigeon-cap.cyclic.app"; // Ganti dengan URL backend Anda
